@@ -11,7 +11,7 @@ function getCheckScript() {
         check['description'] = 'Fetching scripts took less than 500 ms';
       }
       else if(data.duration>500 && data.duration<1000){
-        check['status'] = 'Notr';
+        check['status'] = 'Neutral';
         check['description'] = 'Fetching scripts took between 500 and 1000 ms';
 
       }

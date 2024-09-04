@@ -8,7 +8,7 @@ function getCheckHeading() {
       
       if (data.h1==0) {
           check['status'] = 'Bad';
-          check['description'] = 'H1 there should be one H1';
+          check['description'] = 'There should be at least one H1';
       } else if (data.h1== 1) {
           check['status'] = 'Good';
           check['description'] = 'There is a H1';

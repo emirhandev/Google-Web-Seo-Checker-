@@ -10,7 +10,7 @@ function getCheckTime() {
         check['description'] = 'Web Page load time less than 2000 ms';
        }
        else if(data>2000 && data<4000){
-        check['status'] = 'Notr';
+        check['status'] = 'Neutral';
         check['description'] = 'Web Page load time between 2000 ms and 4000 ms';
        }
        else{

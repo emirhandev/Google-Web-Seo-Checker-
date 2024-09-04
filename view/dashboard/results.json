@@ -1,0 +1,109 @@
+{
+  "header": {
+    "check": {
+      "status": "Neutral",
+      "description": "Missing header information Between 2-4"
+    },
+    "data": {
+      "missingHeaderInfoCount": 3,
+      "missingHeaders": "content-security-policy,strict-transport-security,expires"
+    }
+  },
+  "heading": {
+    "check": {
+      "status": "Bad",
+      "description": "There should be at least one H1"
+    },
+    "data": {
+      "h1": 0,
+      "h2": 47,
+      "h3": 0,
+      "h4": 0,
+      "h5": 0,
+      "url": "https://haberturk.com"
+    }
+  },
+  "image": {
+    "check": {
+      "status": "Good",
+      "description": "No image missing alt text"
+    }
+  },
+  "meta": {
+    "check": {
+      "TitleStatus": "Bad",
+      "TitleDescription": "Title length is not between 50 and 60 characters",
+      "DescriptionStatus": "Bad",
+      "DescriptionDescription": "Description length is not between 150 and 160 characters"
+    },
+    "data": {
+      "evaluation": {
+        "titleLength": 68,
+        "descriptionLength": 182,
+        "keywordsCheck": "Present"
+      },
+      "url": "https://haberturk.com"
+    }
+  },
+  "script": {
+    "check": {
+      "status": "Good",
+      "description": "Fetching scripts took less than 500 ms"
+    },
+    "data": {
+      "duration": 142.85410000011325,
+      "inlineScriptsCount": 24,
+      "url": "https://haberturk.com"
+    }
+  },
+  "size": {
+    "check": {
+      "status": "Good",
+      "description": "Web Page size less than 500 Kb"
+    },
+    "data": 0
+  },
+  "style": {
+    "check": {
+      "internalStatus": "Good",
+      "internalDescription": "There are 1 Internal Styles",
+      "externalStatus": "Good",
+      "externalDescription": "There are 1 External Styles"
+    },
+    "data": {
+      "internalStylesCount": 1,
+      "externalStylesCount": 1,
+      "externalStyleAdress": [
+        "/css/desktop/style.css?v=287"
+      ],
+      "url": "https://haberturk.com"
+    }
+  },
+  "time": {
+    "check": {
+      "status": "Good",
+      "description": "Web Page load time less than 2000 ms"
+    },
+    "data": 1642.8
+  },
+  "text": {
+    "check": {
+      "status": "Bad",
+      "description": "There is more than %60 difference between the first and second most used number"
+    },
+    "data": "güneşli,192,sağanak,39,yağış,39,kısmen,39,ve,36,ne,34,tümü,33,haberleri,27,bir,26,altın,19,için,17,t.c.,16,bridged,16,can,16,baytak,16,karikatürleri,16,nasıl,15,özel,14,en,14,ile,14"
+  },
+  "link": {
+    "check": {
+      "status": "Good",
+      "description": "There is no broken link"
+    },
+    "data": {
+      "internalLinks": 398,
+      "externalLinks": 119,
+      "brokenLinksCount": 0,
+      "brokenLinksList": "",
+      "url": "https://haberturk.com"
+    }
+  }
+}

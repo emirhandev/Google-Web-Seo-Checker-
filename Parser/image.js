@@ -2,6 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const { sql, poolPromise } = require('./db/dbConnect.js');
 
+const altTextMissingImages = [];
 async function analyzeImages(url) {
   try {
     
@@ -20,7 +21,12 @@ async function analyzeImages(url) {
 
      
       if (altText === 'Alt text missing') {
+        
         missingCount++;
+        if (!altTextMissingImages.includes($(img).attr('src'))) {
+          altTextMissingImages.push($(img).attr('src'));
+      }
+      
       }
     }
 
@@ -42,7 +48,8 @@ async function analyzeImages(url) {
         console.log('Data inserted successfully');
         resolve({
           missingCount,
-          url
+          url,
+          altTextMissingImages
         });
       });
     });

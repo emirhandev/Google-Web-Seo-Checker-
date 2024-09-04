@@ -14,6 +14,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+
 app.get('/', (req, res) => {
   const urlParam = req.query.url;
   console.log("URL: "+urlParam)
@@ -25,8 +26,9 @@ if (urlParam.includes("https://")) {
 }
 runAllChecks();
 
+app.use(express.static(path.join(__dirname, 'view/dashboard')));
 
-res.sendFile(path.join(__dirname, 'view', 'detail.html'));
+
 
 app.get('/heading', async (req, res) => {
     try {
@@ -35,9 +37,6 @@ app.get('/heading', async (req, res) => {
     } catch (error) {
       res.status(500).send('An error occurred while fetching heading data');
     }
-  });
-app.get('/heading/chart', (req, res) => {
-    res.sendFile(path.join(__dirname,  'chart.html'));
   });
   app.get('/link', async (req, res) => {
     try {
@@ -52,7 +51,7 @@ app.get('/heading/chart', (req, res) => {
 
     try {
       const imageAnalysis = await analyzeImages(url);
-      res.json(imageAnalysis);
+      res.json(imageAnalysis);  
     } catch (error) {
       res.status(500).send('An error occurred while analyzing images');
     }

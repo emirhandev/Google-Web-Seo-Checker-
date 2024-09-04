@@ -9,7 +9,7 @@ function getCheckHeader() {
           check['status'] = 'Good';
           check['description'] = 'Missing header information less than 2';
       } else if (data.missingHeaderInfoCount >= 2 && data.missingHeaderInfoCount <= 4) {
-          check['status'] = 'Notr';
+          check['status'] = 'Neutral';
           check['description'] = 'Missing header information Between 2-4';
       } else {
           check['status'] = 'Bad';

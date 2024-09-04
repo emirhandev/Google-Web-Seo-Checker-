@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Analysis Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-url"><span id="header-url"></span></h1>
+        <h1 class="header-score">Score: <span id="score"></span></h1>
+    </header>
+    <main>
+        <!--                   clickable          <a href="">       </a>                   -->
+        <section class="dashboard-section">
+            <h2>Header Check</h2>
+            <p>content-security-policy: <span id="content-security-policy" class="headerStatus"></span></p>
+            <p>strict-transport-security: <span id="strict-transport-security" class="headerStatus"></span></p>
+            <p>x-content-type-options: <span id="x-content-type-options" class="headerStatus"></span></p>
+            <p>x-frame-options: <span id="x-frame-options" class="headerStatus"></span></p>
+            <p>x-xss-protection: <span id="x-xss-protection" class="headerStatus"></span></p>
+            <p>cache-control: <span id="cache-control" class="headerStatus"></span></p>
+            <p>expires: <span id="expires" class="headerStatus"></span></p>
+            <p>etag: <span id="etag" class="headerStatus"></span></p>
+  
+
+            
+            <p>Status: <span id="header-status" class="status"></span></p>
+            <p>Description: <span style="font-weight: bold;" id="header-description"></span></p>
+        </section>
+        
+        <section class="dashboard-section">
+          
+            <h2>Heading Check</h2>
+            <p>Status: <span id="heading-status" class="status"></span></p>
+            <div class="heading">
+                <p>H1: <span id="h1" class="status"></span></p>
+                <p>H2: <span id="h2" class="status"></span></p>
+                <p>H3: <span id="h3" class="status"></span></p>
+                <p>H4: <span id="h4" class="status"></span></p>
+                <p>H5: <span id="h5" class="status"></span></p>
+            </div>
+            <p>Description: <span style="font-weight: bold;" id="heading-description"></span></p>
+            <canvas id="headingChart"></canvas> <!-- Add canvas for Chart.js -->
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Image Check</h2>
+            <p>Status: <span id="image-status" class="status"></span></p>
+            <p>Description: <span style="font-weight: bold;" id="image-description"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Meta Check</h2>
+            <p>Meta Title Length: <span style="font-weight: bold;" id="meta-title-length"></span></p>
+            <p>Title Status: <span id="meta-title-status" class="status"></span></p>
+            <p>Meta Title Description: <span style="font-weight: bold;" id="meta-title-description"></span></p>
+            <p>Meta Description length: <span style="font-weight: bold;" id="meta-description-length"></span></p>
+            <p>Description Status: <span id="meta-description-status" class="status"></span></p>
+            <p>Meta Description: <span style="font-weight: bold;" id="meta-description-description"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Script Check</h2>
+            <p>Status: <span id="script-status" class="status"></span></p>
+            <p>Script Duration Time: <span style="font-weight: bold;" id="script-size"></span></p>
+            <p>Script Inline Count: <span style="font-weight: bold;" id="script-inline"></span></p>
+            <p>Description: <span style="font-weight: bold;" id="script-description"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Size Check</h2>
+            <p>Page Size: <span style="font-weight: bold;" id="page-size"></span></p>
+            <p>Status: <span id="size-status" class="status"></span></p>
+            <p>Description: <span style="font-weight: bold;" id="size-description"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Style Check</h2>
+            <p>Internal Status: <span id="style-internal-status" class="status"></span></p>
+            <p>Internal Description: <span style="font-weight: bold;" id="style-internal-description"></span></p>
+            <p>External Status: <span id="style-external-status" class="status"></span></p>
+            <p>External Description: <span style="font-weight: bold;" id="style-external-description"></span></p>
+            <p>External Style Adress: <span style="font-weight: bold;" id="style-external-address"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Page Load Time</h2>
+            <p>Status: <span id="load-time-status" class="status"></span></p>
+            <p style="font-weight:bold ;" id="page-load-times"></p>
+            <p>Description: <span style="font-weight: bold;" id="load-time-description"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Text Check</h2>
+
+            <canvas id="textChart" width="400" height="200"></canvas> <!-- Add canvas for Chart.js -->
+            <p>Status: <span id="text-status" class="status"></span></p>
+            <p>Description: <span style="font-weight: bold;" id="text-description"></span></p>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Link Check</h2>
+            <canvas id="linkChart"></canvas> <!-- Add canvas for Chart.js -->
+            <p>Status: <span id="link-status" class="status"></span></p>
+            <p>Description: <span style="font-weight: bold;" id="link-description"></span></p>
+            <p>Internal Links: <span style="font-weight: bold;" id="internal-link"></span></p>
+            <p>External Links: <span style="font-weight: bold;" id="external-link"></span></p>
+            <p>Broken Links: <span style="font-weight: bold;" id="broken-link"></span></p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

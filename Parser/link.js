@@ -3,7 +3,6 @@ const cheerio = require('cheerio');
 const { URL } = require('url');
 const { sql, poolPromise } = require('./db/dbConnect.js');
 
-
 let baseURL;
 const links = new Set();
 let brokenLinksCount = 0;
@@ -64,7 +63,7 @@ async function fetchLinksData(url) {
       }
     });
 
-    await Promise.all(linkPromises);
+     Promise.all(linkPromises);
   } catch (error) {
     console.error(`Error: ${error.message}`);
   }
@@ -103,4 +102,3 @@ return new Promise((resolve, reject) => {
 }
 
 module.exports = { start, fetchLinksData };
-

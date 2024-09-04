@@ -1,8 +1,8 @@
 const https = require('https');
-const cheerio = require('cheerio');
+const cheerio = require('cheerio');  // For parsing HTML
 const url = require('url');
-const { sql, poolPromise } = require('./db/dbConnect.js');
 
+// Function to get the size of an image
 function getSizeOfImage(imageUrl) {
   return new Promise((resolve, reject) => {
     https.get(imageUrl, (response) => {
@@ -19,6 +19,7 @@ function getSizeOfImage(imageUrl) {
   });
 }
 
+// Function to get the total size of the page including images
 function getPageSize(siteUrl) {
   return new Promise((resolve, reject) => {
     https.get(siteUrl, (response) => {
@@ -28,13 +29,14 @@ function getPageSize(siteUrl) {
       });
       response.on('end', async () => {
         let sizeInBytes = Buffer.byteLength(data);
-        let sizeInMB = sizeInBytes / (1024 * 1024);
+        let sizeInKb = sizeInBytes / (1024 * 1024);
 
         const $ = cheerio.load(data);
         const imageUrls = [];
         $('img').each((i, img) => {
           let imgUrl = $(img).attr('src');
           if (imgUrl) {
+       
             imgUrl = url.resolve(siteUrl, imgUrl);
             imageUrls.push(imgUrl);
           }
@@ -51,29 +53,9 @@ function getPageSize(siteUrl) {
         }
 
         totalImageSize += sizeInBytes;
-        let totalSizeInMB = (totalImageSize / (1024 * 1024)).toFixed(5);
-
-        try {
-          const connection = await poolPromise;
-          const query = 
-            `INSERT INTO Size (Size, Url)
-            VALUES (?, ?)`
-          ;
-          const params = [totalSizeInMB, siteUrl];
-
-          connection.query(query, params, (err, result) => {
-            if (err) {
-              console.error('Error inserting data:', err);
-              reject(err);
-            } else {
-              console.log('Data inserted successfully');
-              resolve(totalSizeInMB);
-            }
-          });
-        } catch (dbError) {
-          console.error('Database error:', dbError);
-          reject(dbError);
-        }
+        let totalSizeInKB = (totalImageSize.toFixed(2))/1000;
+        console.log(`Web sitesinin içeriği boyutu: ${totalSizeInKB} KB`);
+        resolve(totalSizeInKB);
       });
     }).on('error', (e) => {
       reject(e);

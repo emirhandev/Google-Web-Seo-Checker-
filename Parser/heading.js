@@ -16,10 +16,8 @@ async function fetchHeadingData(url) {
 
     const connection = await poolPromise;
 
-    const query = `
-      INSERT INTO Heading (H1, H2, H3, H4, H5, Url)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `;
+    const query = `INSERT INTO Heading (H1, H2, H3, H4, H5, Url)
+      VALUES (?, ?, ?, ?, ?, ?)`;
     const params = [h1, h2, h3, h4, h5, url];
 
     return new Promise((resolve, reject) => {

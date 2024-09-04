@@ -4,13 +4,13 @@ function getCheckSize() {
     .then(response => {
       const data = response.data;
       const check = {};
-       if(data<3){
+       if(data<500){
         check['status'] = 'Good';
-        check['description'] = 'Web Page size less than 3 MB';
+        check['description'] = 'Web Page size less than 500 Kb';
        }
        else{
         check['status'] = 'Bad';
-        check['description'] = 'Web Page size more than 3 MB';
+        check['description'] = 'Web Page size more than 500 Kb';
        }
       return [check,data];
     })
