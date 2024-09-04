@@ -81,7 +81,7 @@ async function evaluateMeta(url) {
 
         return evaluation;
     } catch (error) {
-        console.error('Error evaluating SEO:', error.message);
+        console.error('Error evaluating Meta:', error.message);
         return {};
     }
 }
