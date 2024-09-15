@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 
 async function fetchText(url) {
   try {

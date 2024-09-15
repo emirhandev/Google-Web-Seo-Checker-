@@ -1,8 +1,9 @@
 const https = require('https');
 const cheerio = require('cheerio');  // For parsing HTML
 const url = require('url');
+const { sql, poolPromise } = require('../db/dbConnect');
 
-// Function to get the size of an image
+
 function getSizeOfImage(imageUrl) {
   return new Promise((resolve, reject) => {
     https.get(imageUrl, (response) => {
@@ -15,52 +16,78 @@ function getSizeOfImage(imageUrl) {
       });
     }).on('error', (e) => {
       reject(e);
-    });
+    }); 
   });
 }
 
 // Function to get the total size of the page including images
-function getPageSize(siteUrl) {
-  return new Promise((resolve, reject) => {
-    https.get(siteUrl, (response) => {
-      let data = '';
-      response.on('data', (chunk) => {
-        data += chunk;
-      });
-      response.on('end', async () => {
-        let sizeInBytes = Buffer.byteLength(data);
-        let sizeInKb = sizeInBytes / (1024 * 1024);
-
-        const $ = cheerio.load(data);
-        const imageUrls = [];
-        $('img').each((i, img) => {
-          let imgUrl = $(img).attr('src');
-          if (imgUrl) {
-       
-            imgUrl = url.resolve(siteUrl, imgUrl);
-            imageUrls.push(imgUrl);
-          }
+async function getPageSize(siteUrl) {
+  try {
+    const response = await new Promise((resolve, reject) => {
+      https.get(siteUrl, (response) => {
+        let data = '';
+        response.on('data', (chunk) => {
+          data += chunk;
         });
-
-        let totalImageSize = 0;
-        try {
-          for (const imgUrl of imageUrls) {
-            const imgSize = await getSizeOfImage(imgUrl);
-            totalImageSize += imgSize;
-          }
-        } catch (e) {
-          console.error(`Error fetching image: ${e.message}`);
-        }
-
-        totalImageSize += sizeInBytes;
-        let totalSizeInKB = (totalImageSize.toFixed(2))/1000;
-        console.log(`Web sitesinin içeriği boyutu: ${totalSizeInKB} KB`);
-        resolve(totalSizeInKB);
+        response.on('end', () => {
+          resolve(data);
+        });
+      }).on('error', (e) => {
+        reject(e);
       });
-    }).on('error', (e) => {
-      reject(e);
     });
-  });
+
+    const sizeInBytes = Buffer.byteLength(response);
+    const sizeInKb = sizeInBytes / 1024; 
+
+    const $ = cheerio.load(response);
+    const imageUrls = [];
+    $('img').each((i, img) => {
+      let imgUrl = $(img).attr('src');
+      if (imgUrl) {
+        imgUrl = url.resolve(siteUrl, imgUrl);
+        imageUrls.push(imgUrl);
+      }
+    });
+
+    let totalImageSize = 0;
+    for (const imgUrl of imageUrls) {
+      try {
+        const imgSize = await getSizeOfImage(imgUrl);
+        totalImageSize += imgSize;
+      } catch (e) {
+        console.error(`Error fetching image: ${e.message}`);
+      }
+    }
+
+    totalImageSize += sizeInBytes;  
+    const totalSizeInKB = (totalImageSize / 1024).toFixed(2); 
+
+    console.log(`Website size: ${totalSizeInKB} KB`);
+
+
+    const connection = await poolPromise;
+    const query = `INSERT INTO Size (Size, Url) VALUES (?, ?)`;
+    const params = [totalSizeInKB, siteUrl];
+
+    await new Promise((resolve, reject) => {
+      connection.query(query, params, (err, result) => {
+        if (err) {
+          console.error('Error inserting data:', err);
+          reject(err);
+        } else {
+          console.log('Data inserted successfully');
+          resolve(result);
+        }
+      });
+    });
+
+    return totalSizeInKB;
+
+  } catch (err) {
+    console.error('Error during page size calculation:', err);
+    throw err;
+  }
 }
 
 module.exports = { getPageSize, getSizeOfImage };

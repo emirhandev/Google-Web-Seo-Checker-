@@ -1,8 +1,9 @@
 const puppeteer = require('puppeteer');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 
 async function measurePageLoadTime(url) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless: 'shell'});
+    
     const page = await browser.newPage();
 
     const loadTimes = [];

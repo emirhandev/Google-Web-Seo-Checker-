@@ -13,7 +13,7 @@ function getCheckImage() {
           check['status'] = 'Good';
           check['description'] = 'No image missing alt text';
       }
-      return [check];
+      return [check,data];
     })
     .catch(error => {
       console.error('Error fetching data:', error);

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     let point =0;
-    fetch('results.json')
+    fetch('/results/results.json')
         .then(response => response.json())
         .then(data => {
          
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     statusElement.textContent = 'Present';
                     statusElement.className = 'headerStatus status-present';
-                    point=point+0.125;
+                    point=point+0.25;
                 }
             });
 
@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Image Check
             setStatus('image-status', data.image.check.status);
             document.getElementById('image-description').textContent = data.image.check.description;
+            document.getElementById('image-number').textContent = data.image.data.totalimages;
 
             // Meta Check
             document.getElementById('meta-title-length').textContent = data.meta.data.evaluation.titleLength;
@@ -259,13 +260,61 @@ document.addEventListener("DOMContentLoaded", function() {
                 plugins: [ChartDataLabels] 
             });
 
+
+               // Security Check
+          
+               setStatus('security-status', data.security.check.status);
+               document.getElementById('security-description').textContent = data.security.check.description;
+
         let score = (point/12)*100;
 
 
             console.log(score);
             document.getElementById('score').textContent = '%'+score.toFixed(1)
 
+            if (score <50 ) {
+                document.getElementById('score').className= "badScore"
+               
+            } 
+            else if (score>=50 && score<70){
+                 document.getElementById('score').className= "neutralScore"
+            }
+            else{
+                document.getElementById('score').className= "goodScore"
+            }
 
+
+// Button
+document.getElementById("mainPageButton").addEventListener("click", function() {
+    window.location.href = '/view/mainPage/mainPage.html';
+});
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const currentTime = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('current-time').textContent = currentTime;
+}
+
+// Saati her saniye güncelle
+setInterval(updateTime, 1000);
+
+// Sayfa yüklendiğinde saati göster
+updateTime();
+
+
+
+
+
+
+
+
+
+
+            
+
+            
 
 
 

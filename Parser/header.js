@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 
 async function getHeaders(url) {
     try {
@@ -23,7 +23,8 @@ async function analyzeHeaders(headers, url) {
         "x-xss-protection",
         "cache-control",
         "expires",
-         'etag'
+         'etag',
+        
     ];
 
     let missingHeaderInfoCount = 0;

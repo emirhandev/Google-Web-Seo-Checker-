@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const { URL } = require('url');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 
 let baseURL;
 const links = new Set();
@@ -63,7 +63,7 @@ async function fetchLinksData(url) {
       }
     });
 
-     Promise.all(linkPromises);
+     await Promise.all(linkPromises);
   } catch (error) {
     console.error(`Error: ${error.message}`);
   }

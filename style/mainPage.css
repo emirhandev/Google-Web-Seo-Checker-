@@ -1,7 +1,19 @@
 body {
     background-image: url("img.jpg");
+    background-size: cover; 
+    color: white; /* Ensure text is white or another color that contrasts with the background */
 }
 
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4.5em; /* Adjust the size as needed */
+    color: white; /* Ensure the color is visible against the background */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+
+}
 
 .searchBox {
     position: absolute;

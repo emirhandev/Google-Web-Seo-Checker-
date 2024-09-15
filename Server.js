@@ -10,6 +10,7 @@ const {evaluateMeta} = require('./Parser/meta.js');
 const { analyzeHeaders, getHeaders } = require('./Parser/header.js');
 const analyzeStyle = require('./Parser/style.js');
 const  {runAllChecks}  = require('./Analyzer.js');
+const {checkHttpsLinks} = require('./Parser/security.js')
 const path = require('path');
 const app = express();
 const port = 3000;
@@ -17,16 +18,20 @@ const port = 3000;
 
 app.get('/', (req, res) => {
   const urlParam = req.query.url;
-  console.log("URL: "+urlParam)
-  let url;
-if (urlParam.includes("https://")) {
-    url = urlParam;
-} else {
-    url = "https://" + urlParam;
+  console.log("URL: " + urlParam);
+let url;
+url = urlParam;
+
+if (!url.startsWith("http://") && !url.startsWith("https://")) {
+  url = "https://" + url; 
 }
+
+console.log("Url:" + url);
+
 runAllChecks();
 
 app.use(express.static(path.join(__dirname, 'view/dashboard')));
+
 
 
 
@@ -121,6 +126,16 @@ app.get('/heading', async (req, res) => {
         res.status(500).send('An error occurred while fetching header data');
     }
   });
+
+
+  app.get('/security', async (req, res) => {
+    try {
+        const dataSecurity = await checkHttpsLinks(url);
+        res.json(dataSecurity);
+    } catch (error) {
+        res.status(500).send('An error occurred while fetching header data');
+    }
+  });
 });
 
 
@@ -146,4 +161,6 @@ app.get('/heading', async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
+
+  
 });

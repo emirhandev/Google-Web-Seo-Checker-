@@ -10,9 +10,13 @@ const getCheckSize = require('./Analyzer/sizeAnalyzer');
 const getCheckStyle = require('./Analyzer/styleAnalyzer');
 const getCheckText = require('./Analyzer/textAnalyzer');
 const getCheckTime = require('./Analyzer/timeAnalyzer');
+const getCheckSecurity = require('./Analyzer/securityAnalyzer');
+const {reportAndMailer} = require('./Reporter/reporter.js')
 
 async function runAllChecks() {
   try {
+    
+
     const results = {};
 
     const [headerCheck, headerData] = await getCheckHeader();
@@ -55,16 +59,20 @@ async function runAllChecks() {
     console.log('Link Check:', linkCheck);
     results.link = { check: linkCheck, data: linkData };
 
+    const [securityCheck, securityData] = await getCheckSecurity();
+    console.log('Security Check:', securityCheck);
+    results.security = { check: securityCheck, data: securityData };
+
   
     const jsonResults = JSON.stringify(results, null, 2);
-
    
-    fs.writeFileSync('./view/dashboard/results.json', jsonResults);
-
+    fs.writeFileSync('./results/results.json', jsonResults);
+    reportAndMailer();
   } catch (error) {
     console.error('Error:', error);
   }
   console.log("Finished..");
+
  
 }
 

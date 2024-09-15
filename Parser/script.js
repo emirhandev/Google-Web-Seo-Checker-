@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const { performance } = require('perf_hooks');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 
 async function fetchScriptsWithTiming(url) {
     try {

@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 
 const altTextMissingImages = [];
 async function analyzeImages(url) {
@@ -11,6 +11,8 @@ async function analyzeImages(url) {
 
     
     const images = $('img');
+    let totalimages=images.length;
+  
     let missingCount = 0;
 
   
@@ -34,9 +36,9 @@ async function analyzeImages(url) {
     const connection = await poolPromise;
 
     const query = `
-    INSERT INTO Imagee (altTextMissingCount, Url)
-    VALUES (?, ?)`;
-    const params = [missingCount, url];
+    INSERT INTO Imagee (altTextMissingCount, Url,totalImages)
+    VALUES (?, ?,?)`;
+    const params = [missingCount, url,totalimages];
 
   
     return new Promise((resolve, reject) => {
@@ -49,7 +51,8 @@ async function analyzeImages(url) {
         resolve({
           missingCount,
           url,
-          altTextMissingImages
+          altTextMissingImages,
+          totalimages
         });
       });
     });

@@ -1,0 +1,164 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1F3F49;
+}
+/*   Clickacle
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+*/
+  
+h2{
+    text-align: center;
+    color: #1F3F49;
+}
+ 
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background: #dbdcd5;
+    color: #1F3F49;
+    padding: 20px 40px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.header-url {
+    text-align: left;
+    flex: 1;
+}
+.header-time {
+    text-align: right;
+    flex: 1;
+}
+
+.header-score {
+    text-align: right;
+}
+
+
+.neutralScore{
+    color: rgb(213, 208, 56);
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+
+}
+.badScore{
+    color: rgb(224, 58, 43);
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+.goodScore{
+    color: rgb(35, 236, 42);
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+main {
+    padding: 20px;
+}
+
+.dashboard-section {
+    background: #dbdcd5;
+  
+    border-radius: 50px;
+    margin-bottom: 20px;
+    padding: 20px 60px; 
+   
+    max-width: 600px; 
+    
+    margin: 20px auto;
+}
+
+.heading{
+    display: flex;
+    gap: 1px; 
+    align-items: center; 
+}
+
+
+
+
+
+
+/* Status styles */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+
+    border-color: #1F3F49;
+}
+
+
+
+.status.good {
+    font-weight: bold;
+    background-color: #d4edda; 
+    color: #155724; 
+}
+
+.status.neutral {
+    font-weight: bold;
+    background-color: #fff3cd; 
+    color: #856404; 
+}
+
+.status.bad {
+    font-weight: bold;
+    background-color: #f8d7da; 
+    color: #a31b29; 
+}
+
+.status-present {
+    font-weight: bold;
+    background-color: #d4edda;  
+    color: #155724; 
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.status-missing {
+     font-weight: bold;
+    background-color: #f8d7da;
+    color: #a31b29; 
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+button {
+    background-color: #dbdcd5; 
+    font-weight: bold; /* 'font-size: bold' hatalıydı, 'font-weight' kullanılmalı */
+    color: #1F3F49; 
+    padding: 20px 40px; 
+    border: none; 
+    text-align: center;
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    display: block; 
+    margin: 0 auto; 
+    
+}
+
+button:hover {
+    background-color: #949ec4; 
+    transform: scale(1.05);
+  
+}
+
+button:active {
+    transform: scale(0.98); 
+
+}

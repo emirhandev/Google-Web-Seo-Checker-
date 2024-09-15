@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { sql, poolPromise } = require('./db/dbConnect.js');
+const { sql, poolPromise } = require('../db/dbConnect.js');
 async function fetchMetaTags(url) {
     try {
         const { data } = await axios.get(url);
@@ -81,7 +81,7 @@ async function evaluateMeta(url) {
 
         return evaluation;
     } catch (error) {
-        console.error('Error evaluating Meta:', error.message);
+        console.error('Error evaluating SEO:', error.message);
         return {};
     }
 }

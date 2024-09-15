@@ -1,0 +1,230 @@
+{
+  "header": {
+    "check": {
+      "status": "Bad",
+      "description": "Missing header more than 4"
+    },
+    "data": {
+      "missingHeaderInfoCount": 5,
+      "missingHeaders": "content-security-policy,strict-transport-security,x-frame-options,expires,etag"
+    }
+  },
+  "heading": {
+    "check": {
+      "status": "Bad",
+      "description": "There should be at least one H1"
+    },
+    "data": {
+      "h1": 0,
+      "h2": 0,
+      "h3": 2,
+      "h4": 34,
+      "h5": 0,
+      "url": "https://haberler.com"
+    }
+  },
+  "image": {
+    "check": {
+      "status": "Bad",
+      "description": "There is 110 image with missing alt text"
+    },
+    "data": {
+      "missingCount": 110,
+      "url": "https://haberler.com",
+      "altTextMissingImages": [
+        "https://www.haberler.com/mstatic/assets/img/nav-icon/category-icon.svg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/narin-cinayeti-sorusturmasinda-8-tutuklama-4_17815435_4119.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/narin-cinayeti-sorusturmasinda-8-tutuklama-4_17815435_4119.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/devlet-istiyor-gizli-test-yapilacak-sozleriyle_17815941_9973.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/devlet-istiyor-gizli-test-yapilacak-sozleriyle_17815941_9973_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/kolundaki-isirik-ve-sirtindaki-izler-sorulan_17815683_1097.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/kolundaki-isirik-ve-sirtindaki-izler-sorulan_17815683_1097_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/iste-merkez-bankasi-nin-yil-sonu-dolar-ve_17815984_395.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/iste-merkez-bankasi-nin-yil-sonu-dolar-ve_17815984_395_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/gupedunduz-is-yerinin-onunde-boyle-olduruldu_17815504_3385.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/gupedunduz-is-yerinin-onunde-boyle-olduruldu_17815504_3385_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/her-sey-polisin-gozu-onunde-oldu_17815978_133.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/her-sey-polisin-gozu-onunde-oldu_17815978_133_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/mehteri-son-kez-verdi-istifa-paylasimina-erdogan_17815889_6919.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/mehteri-son-kez-verdi-istifa-paylasimina-erdogan_17815889_6919_z3.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/2-yasindaki-bebege-cinsel-istismar-olayinda-yeni_17814402_8388.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/2-yasindaki-bebege-cinsel-istismar-olayinda-yeni_17814402_8388_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/uzmanlarin-yil-sonu-altin-tahminini-duyan_17815752_516.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/uzmanlarin-yil-sonu-altin-tahminini-duyan_17815752_516_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/narin-cinayetini-cozecek-ses-kaydi-ortaya-cikti_17815449_6397.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/narin-cinayetini-cozecek-ses-kaydi-ortaya-cikti_17815449_6397_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/afganistan-daki-bir-dugunde-cekilen-goruntulere_17813571_578.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/afganistan-daki-bir-dugunde-cekilen-goruntulere_17813571_578_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/alisverislerde-yeni-donem-basliyor-aman-dikkat_17815487_904.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/alisverislerde-yeni-donem-basliyor-aman-dikkat_17815487_904_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/bahceli-ile-ilgili-infial-yaratan-iddiaya-mhp-den_17815490_1894.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/bahceli-ile-ilgili-infial-yaratan-iddiaya-mhp-den_17815490_1894_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/toplu-cinsel-saldiriya-ugrayan-hemsire-doktorun_17815666_1667.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/toplu-cinsel-saldiriya-ugrayan-hemsire-doktorun_17815666_1667_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/super-lig-devine-hayirli-olsun_17815552_2388.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/super-lig-devine-hayirli-olsun_17815552_2388_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/uzman-astrolog-tarih-verdi-iste-12-yilda-bir_17816143_7566.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/uzman-astrolog-tarih-verdi-iste-12-yilda-bir_17816143_7566_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/kadinlar-sac-bas-birbirine-girdi_17816294_8148.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/kadinlar-sac-bas-birbirine-girdi_17816294_8148_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/amca-ile-yasak-ask-yasiyor-mu-narin-in-annesi_17814756_2679.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/amca-ile-yasak-ask-yasiyor-mu-narin-in-annesi_17814756_2679_z4.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/05/dunyaca-unlu-giyim-devi-resmen-iflas-etti_17789920_5875.jpg",
+        "https://foto.haberler.com/manset/2024/09/05/dunyaca-unlu-giyim-devi-resmen-iflas-etti_17789920_5875_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/akaryakit-sektorunu-sarsacak-anlasma-2-dev-bir_17815748_6950.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/akaryakit-sektorunu-sarsacak-anlasma-2-dev-bir_17815748_6950_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/kulupler-anlasti-ama-hoca-istemedi_17815988_2013.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/kulupler-anlasti-ama-hoca-istemedi_17815988_2013_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/haluk-levent-konserini-yarida-kesip-yaptigiyla_17815897_9593.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/haluk-levent-konserini-yarida-kesip-yaptigiyla_17815897_9593_z3.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/chp-li-mahmut-tanal-in-uzerine-emniyet-araci_17814377_9054.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/chp-li-mahmut-tanal-in-uzerine-emniyet-araci_17814377_9054_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/narkozun-etkisiyle-sunnet-oldugunu-sandi_17815704_6370.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/narkozun-etkisiyle-sunnet-oldugunu-sandi_17815704_6370_z3.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/narin-in-katledildigi-koyle-ilgili-tuyler_17816105_8661.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/narin-in-katledildigi-koyle-ilgili-tuyler_17816105_8661_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/muge-anli-videolariyla-taninmisti-cinsiyet_17816056_5956.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/muge-anli-videolariyla-taninmisti-cinsiyet_17816056_5956_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/nakit-para-yasagiyla-ilgili-dikkat-ceken-aciklama_17814389_1184.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/nakit-para-yasagiyla-ilgili-dikkat-ceken-aciklama_17814389_1184_z3.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/yasak-ask-iddiasina-dikkat-ceken-yanit-salim-e_17815365_6647.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/yasak-ask-iddiasina-dikkat-ceken-yanit-salim-e_17815365_6647_z3.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/arda-artik-ilk-11-oynayacak_17816263_5646.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/arda-artik-ilk-11-oynayacak_17816263_5646_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/unlu-ciftin-sette-baslayan-aski-kisa-surdu_17815484_3938.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/unlu-ciftin-sette-baslayan-aski-kisa-surdu_17815484_3938_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/05/yaninda-bebegi-ile-karisinin-onu-aldattigi-anlara_17789066_1764.jpg",
+        "https://foto.haberler.com/manset/2024/09/05/yaninda-bebegi-ile-karisinin-onu-aldattigi-anlara_17789066_1764_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/fenerbahce-nin-bictigi-deger-dudak-ucuklatacak_17815180_43.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/fenerbahce-nin-bictigi-deger-dudak-ucuklatacak_17815180_43_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/taksim-dayi-yillar-sonra-ilk-kez-goruntulendi_17813784_4414.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/taksim-dayi-yillar-sonra-ilk-kez-goruntulendi_17813784_4414_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/karim-beni-tursu-karsiliginda-kadinlara-satiyor_17813840_9637.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/karim-beni-tursu-karsiliginda-kadinlara-satiyor_17813840_9637_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/narin-den-sonra-sila-bebegi-de-kaybettik_17813648_5716.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/narin-den-sonra-sila-bebegi-de-kaybettik_17813648_5716_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/fenerbahce-nin-basini-yakti-e-posta-yakti_17815772_8541.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/fenerbahce-nin-basini-yakti-e-posta-yakti_17815772_8541_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/kuzey-kore-uranyum-ureten-tesisin-goruntulerini_17815986_905.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/kuzey-kore-uranyum-ureten-tesisin-goruntulerini_17815986_905_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/hamile-esini-bogarak-katleden-saniktan-garip_17813346_7798.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/hamile-esini-bogarak-katleden-saniktan-garip_17813346_7798_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/serdar-ortac-araya-girdi-mali-40-yas-kucuk_17815708_5426.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/serdar-ortac-araya-girdi-mali-40-yas-kucuk_17815708_5426_z4.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/gidecegi-yer-bile-belli-sezon-sonunda-benfica_17813866_6052.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/gidecegi-yer-bile-belli-sezon-sonunda-benfica_17813866_6052_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/premier-lig-den-super-lig-e-dev-transfer_17815066_7238.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/premier-lig-den-super-lig-e-dev-transfer_17815066_7238_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/11-yasindaki-prens-george-pilotluk-egitimine_17816065_4526.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/11-yasindaki-prens-george-pilotluk-egitimine_17816065_4526_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/super-lig-de-kalacak_17815102_7383.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/super-lig-de-kalacak_17815102_7383_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/yilmaz-vural-dan-mourinho-ya-olay-sozler_17815612_384.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/yilmaz-vural-dan-mourinho-ya-olay-sozler_17815612_384_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/akilalmaz-bir-hata-yuzunden-fenerbahce-ye-imza_17814382_3320.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/akilalmaz-bir-hata-yuzunden-fenerbahce-ye-imza_17814382_3320_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/donald-trump-cephesinden-onemli-aciklama-kripto_17815580_5531.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/donald-trump-cephesinden-onemli-aciklama-kripto_17815580_5531_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/emre-akbaba-dan-yillar-sonra-gelen-fatih-terim_17813601_5676.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/emre-akbaba-dan-yillar-sonra-gelen-fatih-terim_17813601_5676_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/ust-duzey-isim-basarisiz-oldum-diyerek-ayrildi_17814256_4353.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/ust-duzey-isim-basarisiz-oldum-diyerek-ayrildi_17814256_4353_z4.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/13/rusya-6-ingiliz-diplomati-casusluk-ve-sabotaj_17816148_8147.jpg",
+        "https://foto.haberler.com/manset/2024/09/13/rusya-6-ingiliz-diplomati-casusluk-ve-sabotaj_17816148_8147_z1.jpg",
+        "https://foto.haberler.com/crop/732x411/manset/2024/09/12/kolundaki-isirik-izi-merak-konusu-olmustu-narin_17815149_7558.jpg",
+        "https://foto.haberler.com/manset/2024/09/12/kolundaki-isirik-izi-merak-konusu-olmustu-narin_17815149_7558_z1.jpg",
+        "https://foto.haberler.com/haber/2024/09/05/mahkeme-986_4161_o.jpg",
+        "https://foto.haberler.com/haber/2024/09/05/acik-ceza-infaz-kurumu-mudurlugu-994_4481_o.jpg",
+        "https://foto.haberler.com/haber/2024/09/10/atasehir-belediye-baskanligi-1023_6549_o.jpg"
+      ],
+      "totalimages": 242
+    }
+  },
+  "meta": {
+    "check": {
+      "TitleStatus": "Good",
+      "TitleDescription": "Title length between 50 to 60 characters",
+      "DescriptionStatus": "Good",
+      "DescriptionDescription": "Description length between 150 to 160 characters"
+    },
+    "data": {
+      "evaluation": {
+        "titleLength": 55,
+        "descriptionLength": 158,
+        "keywordsCheck": "Missing"
+      },
+      "url": "https://haberler.com"
+    }
+  },
+  "script": {
+    "check": {
+      "status": "Good",
+      "description": "Fetching scripts took less than 500 ms"
+    },
+    "data": {
+      "duration": 171.01240003108978,
+      "inlineScriptsCount": 26,
+      "url": "https://haberler.com"
+    }
+  },
+  "size": {
+    "check": {
+      "status": "Good",
+      "description": "Web Page size less than 500 Kb"
+    },
+    "data": "0.14"
+  },
+  "style": {
+    "check": {
+      "internalStatus": "Bad",
+      "internalDescription": "There are more than two internal styles",
+      "externalStatus": "Bad",
+      "externalDescription": "There are more than two external styles"
+    },
+    "data": {
+      "internalStylesCount": 4,
+      "externalStylesCount": 4,
+      "externalStyleAdress": [
+        "https://www.haberler.com/mstatic/assets/css/general.min.css?v=638618256506222333",
+        "https://www.haberler.com/mstatic/assets/css/header.css?v=638618256506222333",
+        "https://www.haberler.com/mstatic/assets/css/responsive.css?v=638618256506222333",
+        "https://www.haberler.com/mstatic/assets/css/shorts.css?v=100359"
+      ],
+      "url": "https://haberler.com"
+    }
+  },
+  "time": {
+    "check": {
+      "status": "Good",
+      "description": "Web Page load time less than 2000 ms"
+    },
+    "data": 1893.2
+  },
+  "text": {
+    "check": {
+      "status": "Good",
+      "description": "There is less than %60 difference between the first and second most used number"
+    },
+    "data": "bir,23,ve,22,resmi,18,son,17,haber,17,ilgili,14,narin'in,14,ile,13,dikkat,12,çeken,12,sonra,12,asli̇ye,12,hukuk,12,i̇landır,12,etti,11,transfer,11,mahkemesi̇,11,kez,10,süper,10,yasak,10"
+  },
+  "link": {
+    "check": {
+      "status": "Bad",
+      "description": "There is 3 broken links"
+    },
+    "data": {
+      "internalLinks": 170,
+      "externalLinks": 64,
+      "brokenLinksCount": 3,
+      "brokenLinksList": "https://assistant.google.com/services/invoke/uid/000000e94a58e27a/alm/CgTzh-CxEgIQAQ==?hl=tr,https://tr.wikipedia.org/wiki/Haberler.com,https://www.yenimedya.com.tr/basvuru/",
+      "url": "https://haberler.com"
+    }
+  },
+  "security": {
+    "check": {
+      "status": "Good",
+      "description": "All links are Https (Safe)"
+    },
+    "data": []
+  }
+}
