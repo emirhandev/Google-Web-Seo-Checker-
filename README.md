@@ -38,7 +38,7 @@ This project aims to provide in-depth analysis of websites, focusing on various 
 - Evaluate meta tags for SEO compatibility.
 
 ### 9. **Heading Information**
-- Analyze heading tags (`h1`, `h2`, `h3`, `h4`, `h5`,) to ensure proper structure.
+- Analyze heading tags (`h1`, `h2`, `h3`, `h4`, `h5`) to ensure proper structure.
 
 ### 10. **Google SEO Evaluation**
 - Perform an analysis based on Google's SEO criteria, including mobile compatibility, speed, and content quality.
