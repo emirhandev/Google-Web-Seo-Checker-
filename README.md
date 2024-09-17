@@ -60,8 +60,8 @@ This project aims to provide in-depth analysis of websites, focusing on various 
 ### Reporting
 - The system generates detailed reports, which are visualized using **Chart.js** and can be exported or emailed directly using **nodemailer**.
 ### Installation
--npm install
--run server
+- npm install
+- run server
 
 
 
